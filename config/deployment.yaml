@@ -13,7 +13,8 @@ spec:
     spec:
       containers:
       - name: hello-world
-        image: <Image>
+        image: harness-cd-demo-registry.localhost
+        imagePullPolicy: Always
         resources:
           limits:
             memory: "512Mi"
