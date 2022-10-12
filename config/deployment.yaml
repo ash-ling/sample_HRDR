@@ -13,8 +13,8 @@ spec:
     spec:
       containers:
       - name: hello-world
-        # The image will be updated with Drone CI
-        image: harness-cd-demo-registry.localhost/example/hello-world
+        # Harness CD will update this image during deployment
+        image: <+artifact.image>
         imagePullPolicy: Always
         resources:
           limits:
