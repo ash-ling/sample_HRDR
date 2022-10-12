@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: "{{.Values.name}}"
 spec:
   selector:
     matchLabels:
-      app: hello-world
+      app: "{{.Values.name}}"
   template:
     metadata:
       labels:
-        app: hello-world
+        app: "{{.Values.name}}"
     spec:
       containers:
-      - name: hello-world
+      - name: "{{.Values.name}}"
         # Harness CD will update this image during deployment
-        image: <+artifact.image>
+        image: "{{.Values.image}}"
         imagePullPolicy: Always
         resources:
           limits:
