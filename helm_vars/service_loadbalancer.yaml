@@ -1,4 +1,4 @@
 image:
   pullPolicy: Always
 service:
-  type: NodePort
+  type: LoadBalancer
